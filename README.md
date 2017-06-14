@@ -1,6 +1,7 @@
 # Requirement
 
 [Axios](https://github.com/mzabriskie/axios)
+
 [Notification Component](https://github.com/ctf0/Notification-Component)
 
 # Intro
@@ -79,18 +80,20 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
     <form-input inline-template :get-errors="errors.email">
         <div class="field">
             <label for="email" class="label">E-Mail Address</label>
-            <input type="email"
-                   name="email"
-                   class="input"
-                   v-model="input"
-                   @input="getName($event)"
-                   :class="classObject">
+            <div class="control">
+                <input type="email"
+                       name="email"
+                       class="input"
+                       v-model="input"
+                       @input="getName($event)"
+                       :class="classObject">
+            </div>
         </div>
     </form-input>
     ```
 
 - FormErrors
-    ```php
+    ```html
     <form-input>
         // ...
         <form-errors :errors="showErrors"></form-errors>
