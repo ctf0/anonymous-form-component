@@ -90,6 +90,18 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
             </div>
         </div>
     </form-input>
+
+    // for fileUpload
+    <form-input inline-template :get-errors="errors.image">
+        <div class="field">
+            <label for="image" class="label">Upload</label>
+            <div class="control">
+                <input type="file"
+                       name="image"
+                       @change="getFiles($event)">
+            </div>
+        </div>
+    </form-input>
     ```
 
 - FormErrors
@@ -101,5 +113,5 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
     ```
 
 # ToDo
-* [ ] add support to **`input type="file"`**.
+* [ ] fileUpload logic is added but needs reviewing.
 * [ ] Turn into Package.
