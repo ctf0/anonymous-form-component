@@ -57,8 +57,8 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
                 <div class="control">
                     <button type="submit"
                             class="button is-info"
-                            :disabled="isSubmit"
-                            :class="{'is-loading': isSubmit}">
+                            :disabled="isSubmitting"
+                            :class="{'is-loading': isSubmitting}">
                         Submit
                     </button>
                 </div>

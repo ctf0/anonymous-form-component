@@ -5,14 +5,14 @@
         data() {
             return {
                 errors: [],
-                isSubmit: false,
+                isSubmitting: false,
                 formData: StorageHub.formData
             }
         },
 
         methods: {
             FormSubmit(event) {
-                this.isSubmit = true;
+                this.isSubmitting = true;
 
                 axios({
                     method: event.target.method,
@@ -37,7 +37,7 @@
                     });
 
                 }).catch(error => {
-                    this.isSubmit = false;
+                    this.isSubmitting = false;
 
                     if (error.response) {
                         this.errors = error.response.data

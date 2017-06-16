@@ -5,6 +5,7 @@
         </span>
     </transition>
 </template>
+
 <style scoped>
     /*animation*/
     .slide-fade-enter-active,
@@ -17,6 +18,7 @@
         transform: translateX(10px);
     }
 </style>
+
 <script>
     export default {
         props: ['errors']
