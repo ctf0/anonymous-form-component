@@ -62,9 +62,6 @@
         methods: {
             getName(event) {
                 StorageHub.formData[event.target.name] = this.input;
-            },
-            getFiles(event) {
-                StorageHub.formData[event.target.name] = event.target.files;
             }
         },
     }

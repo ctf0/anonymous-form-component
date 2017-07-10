@@ -5,7 +5,7 @@
 [Notification Component](https://github.com/ctf0/Notification-Component)
 
 # Intro
-- when using with something like laravel, components shouldnt be an add-on complexity layer, instead it should be kept as dump as possible.
+- when using with something like laravel, components shouldn't be an add-on complexity layer, instead it should be kept as dump as possible.
 
 - its easier to maintain the app because you can add any extra inputs you want & add the validation logic to the backend without ever touching the components files.
 
@@ -90,18 +90,6 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
             </div>
         </div>
     </form-input>
-
-    // for fileUpload
-    <form-input inline-template :get-errors="errors.image">
-        <div class="field">
-            <label for="image" class="label">Upload</label>
-            <div class="control">
-                <input type="file"
-                       name="image"
-                       @change="getFiles($event)">
-            </div>
-        </div>
-    </form-input>
     ```
 
 - FormErrors
@@ -112,6 +100,8 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
     </form-input>
     ```
 
+# Notes
+if you need support for `file upload` plz check [This Branch](https://github.com/ctf0/anonymous-form-component/tree/FormData)
+
 # ToDo
-* [ ] fileUpload logic is added but needs reviewing.
 * [ ] Turn into Package.
