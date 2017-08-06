@@ -90,6 +90,20 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
             </div>
         </div>
     </form-input>
+
+    // for radio/checkbox
+    <form-input inline-template :get-errors="errors.email">
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox"
+                           name="remember"
+                           v-model="input"
+                           @click="getName($event)">Remember me
+                </label>
+            </div>
+        </div>
+    </form-input>
     ```
 
 - FormErrors
@@ -100,8 +114,10 @@ Vue.component('FormErrors', require('./path/to/Errors.vue'))
     </form-input>
     ```
 
-# Notes
-if you need support for `file upload` plz check [This Branch](https://github.com/ctf0/anonymous-form-component/tree/FormData)
+## Notes
+
+- This is a combination between showing the form data under **Vue DevTools** while using `FormData()` to send the data to the backend,
+however if you dont care about displaying the data under the **DevTools**, you can use [This](https://github.com/ctf0/anonymous-form-component/tree/FormData) instead.
 
 # ToDo
 * [ ] Turn into Package.
