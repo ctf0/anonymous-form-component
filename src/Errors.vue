@@ -6,6 +6,19 @@
     </transition>
 </template>
 
+<style scoped>
+    /*animation*/
+    .slide-fade-enter-active,
+    .slide-fade-leave-active {
+        transition: all 0.3s ease;
+    }
+    .slide-fade-enter,
+    .slide-fade-leave-active {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+</style>
+
 <script>
 export default {
     name: 'form-errors',
