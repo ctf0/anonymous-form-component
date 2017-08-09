@@ -1,8 +1,11 @@
 <template></template>
 
 <script>
+import FormErrors from './Errors.vue'
+
 export default {
     props: ['getErrors'],
+    components: {FormErrors},
     data() {
         return {
             input: '',

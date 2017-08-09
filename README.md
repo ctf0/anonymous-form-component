@@ -34,7 +34,6 @@ window.StorageHub = new Vue({
 // Components
 Vue.component('MyForm', require('./path/to/Form.vue'))
 Vue.component('FormInput', require('./path/to/Input.vue'))
-Vue.component('FormErrors', require('./path/to/Errors.vue'))
 ```
 
 **2-** make sure your backend return errors payload as an `array`.

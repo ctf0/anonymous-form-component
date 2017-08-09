@@ -8,6 +8,7 @@
 
 <script>
 export default {
+    name: 'form-errors',
     props: ['errors']
 }
 </script>
