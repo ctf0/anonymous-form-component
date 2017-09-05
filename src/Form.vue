@@ -1,5 +1,3 @@
-<template></template>
-
 <script>
 export default {
     data() {
@@ -51,6 +49,7 @@ export default {
                 }
             })
         }
-    }
+    },
+    render () {}
 }
 </script>

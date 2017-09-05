@@ -1,20 +1,13 @@
-<template></template>
-
 <script>
 import FormErrors from './Errors.vue'
 
 export default {
-    props: ['getErrors'],
     components: {FormErrors},
+    props: ['getErrors'],
     data() {
         return {
             input: '',
             newError: false
-        }
-    },
-    mounted() {
-        if (this.$el.type == 'hidden') {
-            StorageHub.formData[this.$el.name] = this.input = this.$el.value
         }
     },
     computed: {
@@ -34,6 +27,16 @@ export default {
                 'is-danger': this.showErrors && !this.input || this.newError,
                 'is-success': this.input && !this.showErrors
             }
+        }
+    },
+    mounted() {
+        if (this.$el.type == 'hidden') {
+            StorageHub.formData[this.$el.name] = this.input = this.$el.value
+        }
+    },
+    methods: {
+        getName(event) {
+            StorageHub.formData[event.target.name] = this.input
         }
     },
     watch: {
@@ -57,10 +60,6 @@ export default {
             }
         }
     },
-    methods: {
-        getName(event) {
-            StorageHub.formData[event.target.name] = this.input
-        }
-    }
+    render () {}
 }
 </script>
