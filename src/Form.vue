@@ -31,7 +31,7 @@ export default {
                     duration: 3,
                     icon: false,
                     onClose() {
-                        window.location.replace('/')
+                        // what to do on notification close
                     }
                 })
 

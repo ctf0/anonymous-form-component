@@ -119,4 +119,5 @@ Vue.component('FormInput', require('./path/to/Input.vue'))
 however if you dont care about displaying the data under the **DevTools**, you can use [This](https://github.com/ctf0/anonymous-form-component/tree/FormData) instead.
 
 # ToDo
-* [ ] Turn into Package.
+
+* Turn into Package.
