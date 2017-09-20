@@ -69,7 +69,7 @@ Vue.component('FormInput', require('./path/to/Input.vue'))
 
 - FormInput
     ```html
-    // for pre-defeined values
+    // for hidden inputes
     <form-input inline-template>
         <input type="hidden" name="token" value="abc">
     </form-input>

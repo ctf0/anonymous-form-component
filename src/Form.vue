@@ -16,17 +16,15 @@ export default {
                 method: event.target.method,
                 url: event.target.action,
                 data: new FormData(event.target)
-            }).then(({data}) => {
+            }).then((res) => {
 
                 this.errors = []
 
                 console.clear()
 
-                const status = data.status ? data.status : 'Thank You'
-
                 EventHub.fire('showNotif', {
                     title: 'Success',
-                    body: status,
+                    body: 'All Good',
                     type: 'success',
                     duration: 3,
                     icon: false,
