@@ -37,7 +37,7 @@ export default {
                 this.isSubmitting = false
 
                 if (error.response) {
-                    this.errors = error.response.data
+                    this.errors = error.response.data.errors
                 } else {
                     EventHub.fire('showNotif', {
                         title: 'Error',

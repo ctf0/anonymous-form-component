@@ -13,7 +13,7 @@
         transition: all 0.3s ease;
     }
     .slide-fade-enter,
-    .slide-fade-leave-active {
+    .slide-fade-leave-to {
         opacity: 0;
         transform: translateX(10px);
     }

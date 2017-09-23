@@ -30,6 +30,7 @@ export default {
         }
     },
     mounted() {
+        // get hidden input value
         if (this.$el.type == 'hidden') {
             StorageHub.formData[this.$el.name] = this.input = this.$el.value
         }
