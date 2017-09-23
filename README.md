@@ -6,7 +6,7 @@
 # Installation
 
 ```bash
-npm install vue axios vuemit vue-notif vue-afc --save
+npm install vue axios vuemit vue-notif --save
 ```
 
 # Usage
@@ -33,7 +33,8 @@ window.StorageHub = new Vue({
 })
 
 // Components
-require('vue-afc')
+Vue.component('MyForm', require('./path/to/Form.vue'))
+Vue.component('FormInput', require('./path/to/Input.vue'))
 Vue.component('MyNotification', require('vue-notif'))
 ```
 
