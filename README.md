@@ -1,24 +1,25 @@
-# Requirement
-
-[Axios](https://github.com/mzabriskie/axios)
-
-[Notification Component](https://github.com/ctf0/Notification-Component)
-
 # Intro
-- when using with something like laravel, components shouldn't be an add-on complexity layer, instead it should be kept as dump as possible.
+- components shouldn't be an add-on complexity layer & it should be kept as dump as possible.
 
-- its easier to maintain the app because you can add any extra inputs you want & add the validation logic to the backend without ever touching the components files.
+- this way its easier to maintain the app because you can add any extra inputs you want & add the validation logic to the backend without ever touching the components files.
+
+# Installation
+
+```bash
+npm install vue axios vuemit vue-notif vue-afc --save
+```
 
 # Usage
 **1-** first register the components
 
-- we use ***Bulma*** for styling, but you can change it by editing the components files.
+- we use ***Bulma*** for styling.
 
 ```js
-window.axios = require('axios')
 window.Vue = require('vue')
+window.axios = require('axios')
+window.EventHub = require('vuemit')
 
-// Axios + Laravel
+// For Laravel
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
     'X-Requested-With': 'XMLHttpRequest'
@@ -32,8 +33,8 @@ window.StorageHub = new Vue({
 })
 
 // Components
-Vue.component('MyForm', require('./path/to/Form.vue'))
-Vue.component('FormInput', require('./path/to/Input.vue'))
+require('vue-afc')
+Vue.component('MyNotification', require('vue-notif'))
 ```
 
 **2-** make sure your backend return errors payload as an `array`.
@@ -113,11 +114,3 @@ Vue.component('FormInput', require('./path/to/Input.vue'))
     </form-input>
     ```
 
-## Notes
-
-- This is a combination between showing the form data under **Vue DevTools** while using `FormData()` to send the data to the backend,
-however if you dont care about displaying the data under the **DevTools**, you can use [This](https://github.com/ctf0/anonymous-form-component/tree/FormData) instead.
-
-# ToDo
-
-* Turn into Package.
