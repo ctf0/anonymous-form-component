@@ -6,7 +6,7 @@
 # Installation
 
 ```bash
-npm install vue axios vuemit vue-notif --save
+npm install vue axios vue-notif --save
 ```
 
 # Usage
