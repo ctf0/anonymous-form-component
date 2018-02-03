@@ -86,7 +86,7 @@ Vue.component('MyNotification', require('vue-notif'))
                        name="email"
                        class="input"
                        v-model="input"
-                       @input="getName($event)"
+                       @blur="getName($event)"
                        :class="classObject">
             </div>
         </div>
