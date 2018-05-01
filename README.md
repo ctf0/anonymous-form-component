@@ -47,23 +47,17 @@ Vue.component('MyNotification', require('vue-notif'))
 
         <form action="url"
               method="post"
-              class="column"
               @submit.prevent="FormSubmit($event)">
 
             <!-- form inputs -->
             ...
 
             <!-- submit -->
-            <div class="field">
-                <div class="control">
-                    <button type="submit"
-                            class="button is-info"
-                            :disabled="isSubmitting"
-                            :class="{'is-loading': isSubmitting}">
-                        Submit
-                    </button>
-                </div>
-            </div>
+            <button type="submit"
+                    :disabled="isSubmitting"
+                    :class="{'is-loading': isSubmitting}">
+                    Submit
+            </button>
         </form>
 
     </my-form>
@@ -77,35 +71,31 @@ Vue.component('MyNotification', require('vue-notif'))
     </form-input>
 
     // for normal inputs
-    // :get-errors="errors.inputName"
     <form-input inline-template :get-errors="errors.email">
-        <div class="field">
-            <label for="email" class="label">E-Mail Address</label>
-            <div class="control">
-                <input type="email"
-                       name="email"
-                       class="input"
-                       v-model="input"
-                       @blur="getName($event)"
-                       :class="classObject">
-            </div>
+        <div>
+            <label for="email">E-Mail Address</label>
+            <input type="email"
+                   name="email"
+                   v-model="input"
+                   @blur="getName($event)"
+                   :class="classObject">
         </div>
     </form-input>
 
     // for radio/checkbox
     <form-input inline-template :get-errors="errors.email">
-        <div class="field">
-            <div class="control">
-                <label class="checkbox">
-                    <input type="checkbox"
-                           name="remember"
-                           v-model="input"
-                           @click="getName($event)">Remember me
-                </label>
-            </div>
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="remember"
+                       v-model="input"
+                       @click="getName($event)">
+                       Remember me
+            </label>
         </div>
     </form-input>
     ```
+> :get-errors="errors.the-input-name"
 
 - FormErrors
     ```html
